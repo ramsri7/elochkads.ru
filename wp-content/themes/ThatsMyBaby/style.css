@@ -1,0 +1,1987 @@
+/*
+Theme Name: Thats My Baby
+Theme URI: http://www.oobor.com
+Description:  That's My Baby Magazine Style WP Theme - To add Featured Images in the Frontpage,upload a image in your posts in the custom field 'featured images'
+Version: 1.0
+Author: Oobor Themes
+Author URI: http://www.oobor.com
+Tags: baby,children,mom,kids, newborn,pregnancy,pregnant,blue,fixed width, three columns, valid XHTML, widgets
+*/
+
+
+body
+{
+  margin: 0 auto;
+  padding: 0;
+  background-color: #FFEBBC;
+  font-family: Arial, Helvetica, Sans-Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover
+h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited,
+.postheader, .postheader a, .postheader a:link, .postheader a:visited, .postheader a:hover,
+.blockheader .t, .vmenublockheader .t, .logo-text, .logo-text a,
+h1.logo-name, h1.logo-name a, h1.logo-name a:link, h1.logo-name a:visited, h1.logo-name a:hover
+{
+  font-style: normal;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+
+a
+{
+  text-decoration: none;
+  color: #A60808;
+}
+
+a:link
+{
+  text-decoration: none;
+  color: #A60808;
+}
+
+a:visited, a.visited
+{
+
+  color: #AD7900;
+}
+
+a:hover, a.hover
+{
+  text-decoration: none;
+  color: #0062AD;
+}
+
+h1, h1 a, h1 a:link, h1 a:visited, h1 a:hover
+{
+  font-family: "Gochi Hand",Arial, Helvetica, Sans-Serif;
+  font-weight: normal;
+  color: #A60808;
+}
+
+h2, h2 a, h2 a:link, h2 a:visited, h2 a:hover
+{
+  font-family: "Gochi Hand",Arial, Helvetica, Sans-Serif;
+  font-weight: normal;
+  font-size: 18px;
+  color: #A60808;
+}
+
+h3, h3 a, h3 a:link, h3 a:visited, h3 a:hover
+{
+  font-family: "Gochi Hand",Arial, Helvetica, Sans-Serif;
+  font-weight: normal;
+  font-size: 18px;
+  color: #E00B0B;
+}
+
+h4, h4 a, h4 a:link, h4 a:visited, h4 a:hover
+{
+  font-family: "Gochi Hand",Arial, Helvetica, Sans-Serif;
+  font-weight: normal;
+  font-size: 18px;
+  color: #523900;
+}
+
+h5, h5 a, h5 a:link, h5 a:visited, h5 a:hover
+{
+  font-family: "Gochi Hand",Arial, Helvetica, Sans-Serif;
+  font-weight: normal;
+  font-size: 15px;
+  color: #523900;
+}
+
+h6, h6 a, h6 a:link, h6 a:visited, h6 a:hover
+{
+  font-family: "Gochi Hand",Arial, Helvetica, Sans-Serif;
+  font-weight: normal;
+  font-size: 15px;
+  color: #523900;
+}
+
+#main
+{
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 0;
+  cursor:default;
+}
+
+#page-background-glare
+{
+  position: absolute;
+  width: 100%;
+  height: 178px;
+  left: 0;
+  top: 0;
+}
+
+#page-background-glare-image
+{
+  background-image: url('images/page_gl.png');
+  background-repeat: no-repeat;
+  height: 178px;
+  width: 700px;
+  margin: 0;
+}
+
+html:first-child #page-background-glare
+{
+  border: 1px solid transparent;/* Opera fix */
+}
+
+#page-background-gradient
+{
+  position: absolute;
+  background-image: url('images/page_g.jpg');
+  background-repeat: repeat-x;
+  top: 0;
+  width: 100%;
+  height: 250px;
+
+}
+
+
+#page-background-simple-gradient
+{
+  position: absolute;
+  background-image: url('images/page_sg.jpg');
+  background-repeat: repeat-x;
+  top: 0;
+  width: 100%;
+  height: 250px;
+}
+
+.cleared
+{
+  float: none;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 1px;
+}
+
+form
+{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+table.position
+{
+  position: relative;
+  width: 100%;
+  table-layout: fixed;
+}
+/* end Page */
+
+/* begin Box, Sheet */
+.sheet
+{
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  width: 1000px;
+  min-width: 31px;
+  min-height: 31px;
+}
+
+.sheet-body
+{
+  position: relative;
+  z-index: 1;
+  padding: 0;
+}
+
+.sheet-tr, .sheet-tl, .sheet-br, .sheet-bl, .sheet-tc, .sheet-bc,.sheet-cr, .sheet-cl
+{
+  position: absolute;
+  z-index: -1;
+}
+
+.sheet-tr, .sheet-tl, .sheet-br, .sheet-bl
+{
+  width: 30px;
+  height: 30px;
+  background-image: url('images/sheet_s.png');
+}
+
+.sheet-tl
+{
+  top: 0;
+  left: 0;
+  clip: rect(auto, 15px, 15px, auto);
+}
+
+.sheet-tr
+{
+  top: 0;
+  right: 0;
+  clip: rect(auto, auto, 15px, 15px);
+}
+
+.sheet-bl
+{
+  bottom: 0;
+  left: 0;
+  clip: rect(15px, 15px, auto, auto);
+}
+
+.sheet-br
+{
+  bottom: 0;
+  right: 0;
+  clip: rect(15px, auto, auto, 15px);
+}
+
+.sheet-tc, .sheet-bc
+{
+  left: 15px;
+  right: 15px;
+  height: 30px;
+  background-image: url('images/sheet_h.png');
+}
+
+.sheet-tc
+{
+  top: 0;
+  clip: rect(auto, auto, 15px, auto);
+}
+
+.sheet-bc
+{
+  bottom: 0;
+  clip: rect(15px, auto, auto, auto);
+}
+
+.sheet-cr, .sheet-cl
+{
+  top: 15px;
+  bottom: 15px;
+  width: 30px;
+  background-image: url('images/sheet_v.png');
+}
+
+.sheet-cr
+{
+  right: 0;
+  clip: rect(auto, auto, auto, 15px);
+}
+
+.sheet-cl
+{
+  left: 0;
+  clip: rect(auto, 15px, auto, auto);
+}
+
+.sheet-cc
+{
+  position: absolute;
+  z-index: -1;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  background-color: #FFFAFA;
+}
+
+.sheet
+{
+  margin-top: 0 !important;
+  cursor:auto;
+}
+
+#page-background-simple-gradient, #page-background-gradient, #page-background-glare
+{
+  min-width: 1000px;
+}
+
+/* end Box, Sheet */
+
+/* begin Menu */
+/* menu structure */
+
+.menu a, .menu a:link, .menu a:visited, .menu a:hover
+{
+  text-align: left;
+  text-decoration: none;
+  outline: none;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+.menu, .menu ul
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style-type: none;
+  display: block;
+}
+
+.menu li
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: block;
+  float: left;
+  position: relative;
+  z-index: 5;
+  background: none;
+}
+
+.menu li:hover
+{
+  z-index: 10000;
+  white-space: normal;
+}
+
+.menu li li
+{
+  float: none;
+}
+
+.menu ul
+{
+  visibility: hidden;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  background: none;
+}
+
+.menu li:hover>ul
+{
+  visibility: visible;
+  top: 100%;
+}
+
+.menu li li:hover>ul
+{
+  top: 0;
+  left: 100%;
+}
+
+.menu:after, .menu ul:after
+{
+  content: ".";
+  height: 0;
+  display: block;
+  visibility: hidden;
+  overflow: hidden;
+  clear: both;
+}
+.menu, .menu ul
+{
+  min-height: 0;
+}
+
+.menu ul
+{
+  background-image: url(images/spacer.gif);
+  padding: 10px 30px 30px 30px;
+  margin: -10px 0 0 -30px;
+}
+
+.menu ul ul
+{
+  padding: 30px 30px 30px 10px;
+  margin: -30px 0 0 -10px;
+}
+
+
+
+
+/* menu structure */
+
+.menu
+{
+  padding: 12px 6px 0 6px;
+}
+
+.nav
+{
+  position: relative;
+  height: 40px;
+  z-index: 100;
+}
+
+.nav .l, .nav .r
+{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  height: 40px;
+  background-image: url('images/nav.png');
+}
+
+.nav .l
+{
+  left: 0;
+  right: 0;
+}
+
+.nav .r
+{
+  right: 0;
+  width: 1000px;
+  clip: rect(auto, auto, auto, 1000px);
+}
+
+
+/* end Menu */
+
+/* begin MenuItem */
+.menu a
+{
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 28px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.menu li
+{
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.menu ul li
+{
+    margin:0;
+    clear: both;
+}
+
+
+.menu a .r, .menu a .l
+{
+  position: absolute;
+  display: block;
+  top: 0;
+  z-index: -1;
+  height: 84px;
+  background-image: url('images/menuitem.png');
+}
+
+.menu a .l
+{
+  left: 0;
+  right: 8px;
+}
+
+.menu a .r
+{
+  width: 416px;
+  right: 0;
+  clip: rect(auto, auto, auto, 408px);
+}
+
+.menu a .t
+{
+  margin-right: 10px;
+  margin-left: 10px;
+  font-family: "oswald",Arial, Helvetica, Sans-Serif;
+  font-size: 10px;
+  color: #FFEAB8;
+  padding: 0 4px;
+  margin: 0 8px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.menu a:hover .l, .menu a:hover .r
+{
+  top: -28px;
+}
+
+.menu li:hover>a .l, .menu li:hover>a .r
+{
+  top: -28px;
+}
+
+.menu li:hover a .l, .menu li:hover a .r
+{
+  top: -28px;
+}
+.menu a:hover .t
+{
+  color: #DBF0FF;
+}
+
+.menu li:hover a .t
+{
+  color: #DBF0FF;
+}
+
+.menu li:hover>a .t
+{
+  color: #DBF0FF;
+}
+
+
+.menu a.active .l, .menu a.active .r
+{
+  top: -56px;
+}
+
+.menu a.active .t
+{
+  color: #360303;
+}
+/* end MenuItem */
+
+/* begin MenuSubItem */
+.menu ul a
+{
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  height: 26px;
+  width: 180px;
+  overflow: hidden;
+  line-height: 26px;
+  background-image: url('images/subitem.png');
+  background-position: left top;
+  background-repeat: repeat-x;
+  border-width: 0;
+  border-style: solid;
+}
+
+.nav ul.menu ul span, .nav ul.menu ul span span
+{
+  display: inline;
+  float: none;
+  margin: inherit;
+  padding: inherit;
+  background-image: none;
+  text-align: inherit;
+  text-decoration: inherit;
+}
+
+.menu ul a, .menu ul a:link, .menu ul a:visited, .menu ul a:hover, .menu ul a:active, .nav ul.menu ul span, .nav ul.menu ul span span
+{
+  text-align: left;
+  text-indent: 12px;
+  text-decoration: none;
+  line-height: 26px;
+  color: #FFFAFA;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 12px;
+  margin:0;
+  padding:0;
+}
+
+.menu ul li a:hover
+{
+  color: #00233D;
+  background-position: 0 -26px;
+}
+
+.menu ul li:hover>a
+{
+  color: #00233D;
+  background-position: 0 -26px;
+}
+
+.nav .menu ul li a:hover span, .nav .menu ul li a:hover span span
+{
+  color: #00233D;
+}
+
+.nav .menu ul li:hover>a span, .nav .menu ul li:hover>a span span
+{
+  color: #00233D;
+}
+
+
+/* end MenuSubItem */
+
+/* begin Header */
+div.header
+{
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
+  width: 1000px;
+  height: 250px;
+  overflow: hidden;
+}
+
+
+div.header-jpeg
+{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 1000px;
+  height: 250px;
+  background-image: url('images/header.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* end Header */
+
+/* begin Logo */
+.logo
+{
+  display: block;
+  position: absolute;
+  left: 210px;
+  top: 68px;
+  width: 790px;
+}
+
+h1.logo-name
+{
+  display: block;
+  text-align: left;
+}
+
+h1.logo-name, h1.logo-name a, h1.logo-name a:link, h1.logo-name a:visited, h1.logo-name a:hover
+{
+  font-family: "Gochi Hand",Arial, Helvetica, Sans-Serif;
+  font-weight: normal;
+  font-size: 48px;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color: #007EDD!important;
+text-shadow: 0px 0px 3px#fff;
+}
+
+.logo-text
+{
+  display: block;
+  text-align: left;
+}
+
+.logo-text, .logo-text a
+{
+  font-family: "Gochi Hand",Arial, Helvetica, Sans-Serif;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  color: #7F0606 !important;
+}
+/* end Logo */
+
+/* begin Layout */
+.content-layout
+{
+  display: table;
+  padding: 0;
+  border: none;
+  width: 1000px;
+}
+
+.content-layout .content-layout
+{
+  width: auto;
+  margin:0;
+}
+
+div.content-layout div.layout-cell, div.content-layout div.layout-cell div.content-layout div.layout-cell
+{
+   display: table-cell;
+}
+
+div.layout-cell div.layout-cell
+{
+   display: block;
+}
+
+div.content-layout-row
+{
+  display: table-row; 
+}
+
+.content-layout
+{
+  table-layout: fixed;
+  border-collapse: collapse;
+  background-color: Transparent;
+  border: none !important;
+  padding:0 !important;
+}
+
+.layout-cell, .content-layout-row
+{
+  background-color: Transparent;
+  vertical-align: top;
+  text-align: left;
+  border: none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+/* end Layout */
+
+/* begin Box, Block, VMenuBlock */
+.vmenublock
+{
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  min-width: 1px;
+  min-height: 1px;
+}
+
+.vmenublock-body
+{
+  position: relative;
+  z-index: 1;
+  padding: 0;
+}
+
+
+.vmenublock
+{
+  margin: 0;
+}
+
+/* end Box, Block, VMenuBlock */
+
+/* begin Box, Box, VMenuBlockContent */
+.vmenublockcontent
+{
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  min-width: 1px;
+  min-height: 1px;
+}
+
+.vmenublockcontent-body
+{
+  position: relative;
+  z-index: 1;
+  padding: 0;
+}
+
+
+.vmenublockcontent
+{
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  min-width: 1px;
+  min-height: 1px;
+}
+
+.vmenublockcontent-body
+{
+  position: relative;
+  z-index: 1;
+  padding: 0;
+}
+
+
+/* end Box, Box, VMenuBlockContent */
+
+/* begin VMenu */
+ul.vmenu, ul.vmenu li
+{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  line-height: 0;
+}/* end VMenu */
+
+/* begin VMenuItem */
+ul.vmenu a
+{
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 24px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul.vmenu li.vmenu-separator
+{
+  display: block;
+  padding: 0 0 0 0;
+  margin: 0;
+  font-size: 1px;
+  background-color: #F86868;
+}
+
+ul.vmenu .vmenu-separator-span
+{
+  display: block;
+  padding: 0;
+  font-size: 1px;
+  height: 0;
+  line-height: 0;
+  border-top: dashed 1px #FBA7A7;
+}
+
+ul.vmenu a .r, ul.vmenu a .l
+{
+  position: absolute;
+  display: block;
+  top: 0;
+  z-index: -1;
+  height: 72px;
+  background-image: url('images/vmenuitem.png');
+}
+
+ul.vmenu a .l
+{
+  left: 0;
+  right: 0;
+}
+
+ul.vmenu a .r
+{
+  width: 1000px;
+  right: 0;
+  clip: rect(auto, auto, auto, 1000px);
+}
+
+ul.vmenu a .t
+{
+  display: block;
+  line-height: 24px;
+  color: #FFFCF5;
+  padding: 0 7px 0 7px;
+  font-family: "Gochi Hand",Arial, Helvetica, Sans-Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  margin-left:0;
+  margin-right:0;
+}
+
+ul.vmenu a:hover .l, ul.vmenu a:hover .r
+{
+  top: -24px;
+}
+
+ul.vmenu a:hover .t
+{
+  color: #CCE9FF;
+}
+
+ul.vmenu a.active .l, ul.vmenu a.active .r
+{
+  top: -48px;
+}
+
+ul.vmenu a.active .t
+{
+  color: #005799;
+}
+/* end VMenuItem */
+
+/* begin VMenuSubItem */
+ul.vmenu ul, ul.vmenu ul li
+{
+  margin: 0;
+  padding: 0;
+}
+
+ul.vmenu ul a
+{
+  display: block;
+  white-space: nowrap;
+  height: 20px;
+  overflow: visible;
+  background-image: url('images/vsubitem.gif');
+  background-position: 15px 0;
+  background-repeat: repeat-x;
+  padding-left: 30px;
+}
+
+
+ul.vmenu ul span, ul.vmenu ul span span
+{
+  display: inline;
+  float: none;
+  margin: inherit;
+  padding: inherit;
+  background-image: none;
+  text-align: inherit;
+  text-decoration: inherit;
+}
+
+ul.vmenu ul a, ul.vmenu ul a:link, ul.vmenu ul a:visited, ul.vmenu ul a:hover, ul.vmenu ul a:active, ul.vmenu ul span, ul.vmenu ul span span
+{
+  line-height: 20px;
+  color: #BD8400;
+  font-size: 11px;
+  margin-left: 0;
+}
+
+ul.vmenu ul
+{
+    margin:0 0 0 0;
+}
+
+ul.vmenu ul ul
+{
+  margin:0 0 0 0;
+}
+
+ul.vmenu ul li.vsubmenu-separator
+{ 
+  display: block;
+  margin: 0;
+  font-size: 1px;
+  padding: 0 0 0 0;
+ }
+
+ul.vmenu ul .vsubmenu-separator-span
+{
+  display: block;
+  padding: 0;
+  font-size: 1px;
+  height: 0;
+  line-height: 0;
+  margin: 0;
+  border: none;
+}
+
+ul.vmenu ul li li a
+{
+  background-position: 30px 0;
+  padding-left: 45px;
+}
+
+ul.vmenu ul li li li a
+{
+  background-position: 45px 0;
+  padding-left: 60px;
+}
+
+ul.vmenu ul li li li li a
+{
+  background-position: 60px 0;
+  padding-left: 75px;
+}
+
+ul.vmenu ul li li li li li a
+{
+  background-position: 75px 0;
+  padding-left: 90px;
+}
+
+
+ul.vmenu ul li a.active
+{
+  color: #700505;
+  background-position: 15px -40px;
+}
+
+ul.vmenu ul li li a.active
+{
+  background-position: 30px -40px;
+}
+
+ul.vmenu ul li li li a.active
+{
+  background-position: 45px -40px;
+}
+
+ul.vmenu ul li li li li a.active
+{
+  background-position: 60px -40px;
+}
+
+ul.vmenu ul li li li li li a.active
+{
+  background-position: 75px -40px;
+}
+
+
+
+ul.vmenu ul li a:hover, ul.vmenu ul li a:hover.active
+{
+  color: #006BBD;
+  background-position: 15px -20px;
+}
+
+
+ul.vmenu ul li li a:hover, ul.vmenu ul li li a:hover.active
+{
+  background-position: 30px -20px;
+}
+
+ul.vmenu ul li li li a:hover, ul.vmenu ul li li li a:hover.active
+{
+  background-position: 45px -20px;
+}
+
+ul.vmenu ul li li li li a:hover, ul.vmenu ul li li li li a:hover.active
+{
+  background-position: 60px -20px;
+}
+
+ul.vmenu ul li li li li li a:hover, ul.vmenu ul li li li li li a:hover.active
+{
+  background-position: 75px -20px;
+}
+/* end VMenuSubItem */
+
+/* begin Box, Block */
+.block
+{
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  min-width: 1px;
+  min-height: 1px;
+}
+
+.block-body
+{
+  position: relative;
+  z-index: 1;
+  padding: 0;
+}
+
+
+.block
+{
+  margin: 5px;
+}
+
+/* end Box, Block */
+
+/* begin BlockHeader */
+.blockheader
+{
+  position: relative;
+  z-index: 0;
+  height: 42px;
+  margin-bottom: 7px;
+}
+
+.blockheader .t
+{
+  height: 42px;
+  color: #FFF4DB;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-family: "Gochi Hand",Arial, Helvetica, Sans-Serif;
+  font-weight: normal;
+  font-size: 20px;
+  margin:0;
+  padding: 0 10px 0 40px;
+  white-space: nowrap;
+  line-height: 42px;	
+}
+
+.blockheader .l, .blockheader .r
+{
+  display: block;
+  position: absolute;
+  z-index: -1;
+  height: 42px;
+  background-image: url('images/blockheader.png');
+}
+
+.blockheader .l
+{
+  left: 0;
+  right: 40px;
+}
+
+.blockheader .r
+{
+  width: 1000px;
+  right: 0;
+  clip: rect(auto, auto, auto, 960px);
+}
+
+/* end BlockHeader */
+
+/* begin Box, BlockContent */
+.blockcontent
+{
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  min-width: 13px;
+  min-height: 13px;
+}
+
+.blockcontent-body
+{
+  position: relative;
+  z-index: 1;
+  padding: 7px;
+}
+
+.blockcontent-tr, .blockcontent-tl, .blockcontent-br, .blockcontent-bl, .blockcontent-tc, .blockcontent-bc,.blockcontent-cr, .blockcontent-cl
+{
+  position: absolute;
+  z-index: -1;
+}
+
+.blockcontent-tr, .blockcontent-tl, .blockcontent-br, .blockcontent-bl
+{
+  width: 12px;
+  height: 12px;
+  background-image: url('images/blockcontent_s.png');
+}
+
+.blockcontent-tl
+{
+  top: 0;
+  left: 0;
+  clip: rect(auto, 6px, 6px, auto);
+}
+
+.blockcontent-tr
+{
+  top: 0;
+  right: 0;
+  clip: rect(auto, auto, 6px, 6px);
+}
+
+.blockcontent-bl
+{
+  bottom: 0;
+  left: 0;
+  clip: rect(6px, 6px, auto, auto);
+}
+
+.blockcontent-br
+{
+  bottom: 0;
+  right: 0;
+  clip: rect(6px, auto, auto, 6px);
+}
+
+.blockcontent-tc, .blockcontent-bc
+{
+  left: 6px;
+  right: 6px;
+  height: 12px;
+  background-image: url('images/blockcontent_h.png');
+}
+
+.blockcontent-tc
+{
+  top: 0;
+  clip: rect(auto, auto, 6px, auto);
+}
+
+.blockcontent-bc
+{
+  bottom: 0;
+  clip: rect(6px, auto, auto, auto);
+}
+
+.blockcontent-cr, .blockcontent-cl
+{
+  top: 6px;
+  bottom: 6px;
+  width: 12px;
+  background-image: url('images/blockcontent_v.png');
+}
+
+.blockcontent-cr
+{
+  right: 0;
+  clip: rect(auto, auto, auto, 6px);
+}
+
+.blockcontent-cl
+{
+  left: 0;
+  clip: rect(auto, 6px, auto, auto);
+}
+
+.blockcontent-cc
+{
+  position: absolute;
+  z-index: -1;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background-color: #FFEBBD;
+}
+
+.blockcontent-body
+{
+  color: #422E00;
+  font-size: 12px;
+}
+
+.blockcontent-body a:link
+{
+  color: #005799;
+
+}
+
+.blockcontent-body a:visited, .blockcontent-body a.visited
+{
+  color: #996B00;
+
+}
+
+.blockcontent-body a:hover, .blockcontent-body a.hover
+{
+  color: #920707;
+  text-decoration: none;
+}
+
+.blockcontent-body ul
+{
+  list-style-type: none;
+  color: #855D00;
+  margin: 0;
+  padding: 0;
+}
+
+.blockcontent-body ul li
+{
+  line-height: 1.25em;
+}
+
+
+/* end Box, BlockContent */
+
+/* begin Button */
+.button-wrapper .button
+{
+  font-family: "oswald",Arial, Helvetica, Sans-Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: left;
+  text-decoration: none !important;
+  color: #FFF4DB !important;
+  width: auto;
+  outline: none;
+  border: none;
+  background: none;
+  line-height: 26px;
+  height: 26px;
+  margin: 0;
+  padding: 0 10px !important;
+  overflow: visible;
+  cursor: default;
+  z-index: 0;
+}
+
+.button img, .button-wrapper img
+{
+  margin: 0;
+  vertical-align: middle;
+}
+
+.button-wrapper
+{
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  height: 26px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+.firefox2 .button-wrapper
+{
+  display: block;
+  float: left;
+}
+
+input, select, textarea, select
+{
+  vertical-align: middle;
+  font-family: "oswald",Arial, Helvetica, Sans-Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.block select 
+{
+    width:96%;
+}
+
+.button-wrapper.hover .button, .button:hover
+{
+  color: #610505 !important;
+  text-decoration: none !important;
+}
+
+.button-wrapper.active .button
+{
+  color: #00345C !important;
+}
+
+.button-wrapper .l, .button-wrapper .r
+{
+  display: block;
+  position: absolute;
+  z-index: -1;
+  height: 78px;
+  margin: 0;
+  padding: 0;
+  background-image: url('images/button.png');
+}
+
+.button-wrapper .l
+{
+  left: 0;
+  right: 11px;
+}
+
+.button-wrapper .r
+{
+  width: 423px;
+  right: 0;
+  clip: rect(auto, auto, auto, 412px);
+}
+
+.button-wrapper.hover .l, .button-wrapper.hover .r
+{
+  top: -26px;
+}
+
+.button-wrapper.active .l, .button-wrapper.active .r
+{
+  top: -52px;
+}
+
+.button-wrapper input
+{
+  float: none !important;
+}
+/* end Button */
+
+/* begin Box, Post */
+.post
+{
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  min-width: 1px;
+  min-height: 1px;
+}
+
+.post-body
+{
+  position: relative;
+  z-index: 1;
+  padding: 7px;
+}
+
+
+.post
+{
+  margin: 10px;
+}
+
+a img
+{
+  border: 0;
+}
+
+.article img, img.article
+{
+  margin: 7px;
+}
+
+.metadata-icons img
+{
+  border: none;
+  vertical-align: middle;
+  margin: 2px;
+}
+
+.article table, table.article
+{
+  border-collapse: collapse;
+  margin: 1px;
+  width: auto;
+}
+
+.article table, table.article .article tr, .article th, .article td
+{
+  background-color: Transparent;
+}
+
+.article th, .article td
+{
+  padding: 2px;
+  border: solid 1px #AF0808;
+  vertical-align: top;
+  text-align: left;
+}
+
+.article th
+{
+  text-align: center;
+  vertical-align: middle;
+  padding: 7px;
+}
+
+pre
+{
+  overflow: auto;
+  padding: 0.1em;
+}
+
+/* end Box, Post */
+
+/* begin PostHeaderIcon */
+.postheader
+{
+  margin: 0.2em 0;
+  padding: 0;
+  font-family: "Gochi Hand",Arial, Helvetica, Sans-Serif;
+  font-weight: normal;
+  font-size: 22px;
+  color: #750606;
+}
+
+.postheader a, .postheader a:link, .postheader a:visited, .postheader a:hover
+{
+  font-family: "Gochi Hand",Arial, Helvetica, Sans-Serif;
+  font-weight: normal;
+  font-size: 22px;
+  margin: 0;
+  color: #750606;
+}
+
+.postheader img
+{
+  border: none;
+  vertical-align: middle;
+  margin: 0;
+}
+/* end PostHeaderIcon */
+
+/* begin PostHeader */
+.postheader a:link
+{
+  text-align: left;
+  text-decoration: none;
+  color: #8D0707;
+}
+
+.postheader a:visited, .postheader a.visited
+{
+
+  color: #BE0909;
+}
+
+.postheader a:hover, .postheader a.hovered
+{
+  text-decoration: none;
+  color: #0062AD;
+}
+/* end PostHeader */
+
+/* begin PostIcons, PostHeaderIcons */
+.postheadericons
+{
+  padding: 1px;
+}
+
+.postheadericons, .postheadericons a, .postheadericons a:link, .postheadericons a:visited, .postheadericons a:hover
+{
+  font-family: "oswald",Arial, Helvetica, Sans-Serif;
+  font-style: italic;
+  font-weight: normal;
+  color: #C80909;
+}
+
+.postheadericons a, .postheadericons a:link, .postheadericons a:visited, .postheadericons a:hover
+{
+  margin: 0;
+}
+
+.postheadericons a:link
+{
+
+  color: #A60808;
+}
+
+.postheadericons a:visited, .postheadericons a.visited
+{
+
+  color: #AD7900;
+}
+
+.postheadericons a:hover, .postheadericons a.hover
+{
+
+  color: #0062AD;
+}
+/* end PostIcons, PostHeaderIcons */
+
+/* begin PostContent */
+.postcontent p
+{
+  margin: 0.5em 0;
+}
+
+.postcontent, .postcontent p, ul.menu, ul.menu ul, ul.vmenu, ul.vmenu ul
+{
+  text-align: justify;
+}
+
+.postcontent
+{
+  margin: 0;
+}
+/* end PostContent */
+
+/* begin PostBullets */
+ol, ul
+{
+  color: #7A5600;
+  margin: 1em 0 1em 2em;
+  padding: 0;
+  font-size: 12px;
+}
+
+li ol, li ul
+{
+  margin: 0.5em 0 0.5em 2em;
+  padding: 0;
+}
+
+li
+{
+  margin: 0.2em 0;
+  padding: 0;
+}
+
+ul
+{
+  list-style-type: none;
+}
+
+ol
+{
+  list-style-position: inside;
+
+}
+
+
+
+.post li
+{
+  padding: 0 0 0 16px;
+  line-height: 1em;
+}
+
+.post ol li, .post ul ol li
+{
+  background: none;
+  padding-left: 0;
+}
+
+.post ul li, .post ol ul li
+{
+  background-image: url('images/postbullets.png');
+  background-repeat: no-repeat;
+  padding-left: 16px;
+}
+
+
+/* end PostBullets */
+
+/* begin PostQuote */
+blockquote,
+blockquote p,
+.postcontent blockquote p
+{
+  color: #1F1500;
+  text-align: left;
+}
+
+blockquote,
+.postcontent blockquote
+{
+  margin: 10px 10px 10px 50px;
+  padding: 5px 5px 5px 32px;
+  background-color: #FBB1B1;
+  background-image: url('images/postquote.png');
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+
+/* end PostQuote */
+
+/* begin PostMetadata, PostMetadataFooter */
+.postmetadatafooter
+{
+  padding: 1px;
+  background-color: #FFEBBD;
+}
+/* end PostMetadata, PostMetadataFooter */
+
+/* begin PostIcons, PostFooterIcons */
+.postfootericons
+{
+  padding: 1px;
+}
+
+.postfootericons, .postfootericons a, .postfootericons a:link, .postfootericons a:visited, .postfootericons a:hover
+{
+  font-family: "oswald",Arial, Helvetica, Sans-Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  color: #A10808;
+}
+
+.postfootericons a, .postfootericons a:link, .postfootericons a:visited, .postfootericons a:hover
+{
+  margin: 0;
+}
+
+.postfootericons a:link
+{
+  text-decoration: none;
+  color: #920707;
+}
+
+.postfootericons a:visited, .postfootericons a.visited
+{
+
+  color: #996B00;
+}
+
+.postfootericons a:hover, .postfootericons a.hover
+{
+
+  color: #005799;
+}
+/* end PostIcons, PostFooterIcons */
+
+/* begin Footer */
+.footer
+{
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.footer .footer-inner
+{
+  height: 1%;
+  position: relative;
+  z-index: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer .footer-background
+{
+  position: absolute;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-image: url('images/footer.png');
+  width: 1000px;
+  height: 150px;
+  bottom: 0;
+  left: 0;
+}
+
+
+.rss-tag-icon
+{
+  position: relative;
+  display: block;
+  float: left;
+  background-image: url('images/rssicon.png');
+  background-position: center right;
+  background-repeat: no-repeat;
+  margin: 0 5px 0 0;
+  height: 25px;
+  width: 25px;
+
+}
+
+
+.footer .footer-text p
+{
+  margin: 0;
+}
+
+.footer .footer-text
+{
+  display: inline-block;
+  color: #523900;
+  letter-spacing: 1px;
+}
+
+.footer .footer-text a:link
+{
+  text-decoration: none;
+  color: #A60808;
+
+}
+
+.footer .footer-text a:visited
+{
+  text-decoration: none;
+  color: #AD7900;
+
+}
+
+.footer .footer-text a:hover
+{
+  color: #599191;
+  text-decoration: none;
+}
+/* end Footer */
+
+/* begin PageFooter */
+.page-footer, .page-footer a, .page-footer a:link, .page-footer a:visited, .page-footer a:hover
+{
+  font-family: 'oswald',Arial;
+  font-size: 10px;
+  letter-spacing: normal;
+  word-spacing: normal;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  color: #C30909;
+}
+
+.page-footer
+{
+  margin: 1em;
+  text-align: center;
+  text-decoration: none;
+  color: #CC8F00;
+}
+/* end PageFooter */
+
+/* begin LayoutCell, sidebar1 */
+.content-layout .sidebar1
+{
+  width: 20%;
+}
+/* end LayoutCell, sidebar1 */
+
+/* begin LayoutCell, content */
+.content-layout .content
+{
+  width: 60%;
+}
+.content-layout .content .block
+{
+  background-color: #FFFFFF;
+}
+.content-layout .content-sidebar1
+{
+  width: 80%;
+}
+.content-layout .content-sidebar2
+{
+  width: 80%;
+}
+.content-layout .content-wide
+{
+  width: 100%;
+}
+/* end LayoutCell, content */
+
+/* begin LayoutCell, sidebar2 */
+.content-layout .sidebar2
+{
+  width: 20%;
+}
+/* end LayoutCell, sidebar2 */
+
+
+
+.commentlist, .commentlist li
+{
+  background: none;
+}
+
+.commentlist li li
+{
+  margin-left: 30px;
+}
+
+.commentlist li .avatar
+{
+  float: right;
+  border: 1px solid #eee;
+  padding: 2px;
+  margin: 1px;
+  background: #fff;
+}
+
+.commentlist li cite
+{
+  font-size: 1.2em;
+}
+
+#commentform textarea
+{
+  width: 100%;
+}
+
+img.wp-smiley
+{
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation
+{
+  display: block;
+  text-align: center;
+}
+
+/* Recommended by http://codex.wordpress.org/CSS */
+/* Begin */
+.aligncenter, div.aligncenter, .article .aligncenter img, .aligncenter img.article, .aligncenter img, img.aligncenter
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignleft
+{
+  float: left;
+}
+
+.alignright
+{
+  float: right;
+}
+
+.alignright img, img.alignright
+{
+  margin: 1em;
+  margin-right: 0;
+}
+
+.alignleft img, img.alignleft
+{
+  margin: 1em;
+  margin-left: 0;
+}
+
+.wp-caption
+{
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: #f3f3f3;
+  padding-top: 4px;
+  margin: 10px;
+}
+
+.wp-caption img
+{
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
+
+.wp-caption p.wp-caption-text
+{
+  font-size: 11px;
+  line-height: 17px;
+  padding: 0 4px 5px;
+  margin: 0;
+}
+/* End */
+
+
+.hidden
+{
+  display: none;
+}
+
+/* Calendar */
+#wp-calendar {
+  empty-cells: show;
+  margin: 10px auto 0;
+  width: 155px;
+}
+
+#wp-calendar #next a {
+  padding-right: 10px;
+  text-align: right;
+}
+
+#wp-calendar #prev a {
+  padding-left: 10px;
+  text-align: left;
+}
+
+#wp-calendar a {
+  display: block;
+}
+
+#wp-calendar caption {
+  text-align: center;
+  width: 100%;
+}
+
+#wp-calendar td {
+  padding: 3px 0;
+  text-align: center;
+}
+
+.gallery {
+  letter-spacing: normal;
+}
+
+.content {
+  position: relative;
+  z-index: 1;   
+}
+
+#todays-events{
+  position: relative;
+  z-index: 11;    
+}
+
+#upcoming-events{
+  position: relative;
+  z-index: 10;    
+}
+.pagination {display:block; padding:10px 0; font-family: 'oswald',Arial, Helvetica, Sans-Serif;font-size: 12px;}
+
+.pagination span, .pagination a {float:left; margin:0 2px 0 0; padding:2px 4px; font-family: 'oswald',Arial, Helvetica, Sans-Serif;}
+.pagination span {background:#0069B9; color:#fff; font-family: 'oswald',Arial, Helvetica, Sans-Serif;}
+.pagination a {background:#E50B0B; color:#ffffff; text-decoration:none; font-family: 'oswald',Arial, Helvetica, Sans-Serif;}
+.pagination a:hover {background:#E50B0B; color:#000000; font-family: 'oswald',Arial, Helvetica, Sans-Serif;}
+
