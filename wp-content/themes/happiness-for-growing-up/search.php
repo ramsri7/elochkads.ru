@@ -18,27 +18,12 @@
                 <?php if ( $user_ID ) : ?>
 					<div class="edit_post"><?php edit_post_link(__('Редактировать')); ?> (Вы вошли как <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>)</div>
 				<?php endif; ?>
-				<div class="bookmark"><?php include(TEMPLATEPATH . '/bookmark.php'); ?></div>
+
 			</div>
 			</div>
 			</div>
 			<?php endwhile; ?>
-			<!-- sidebar sub start -->
-		<div id="sidebar_sub" class="clearfix">
-			<div class="sub_icon"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/sub_icon.png" alt="Sub Icon" /></div>
-            <ul>
-				<li class="recent_comments">
-					<?php get_recent_comments(array('number' => 5)); ?>
-				</li>
-				<li class="recent_posts">
-					<h2>Недавние записи</h2>
-					<ul>
-						<?php get_archives('postbypost', 5); ?>
-					</ul>
-				</li>
-             </ul>
-		</div>
-		<!-- sidebar sub end -->
+			
 			<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } else { ?>
 					<div class="wp-pagenavi">
 					<div class="alignleft"><?php next_posts_link('&laquo; Предыдущие записи') ?></div>

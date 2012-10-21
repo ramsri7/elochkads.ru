@@ -546,3 +546,15 @@ h3#comments, #respond h3 {
 	border-left: 1px solid #666; /* even page */
 	background-color: #C2CB34;
 }
+div#content p
+{
+    color: #333;
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    line-height: 1.5;
+    text-indent: 0px;
+    text-align: left;
+    font-size:14px;
+    text-indent: 15px;
+
+}
+li.current_page_item a {color:#000}

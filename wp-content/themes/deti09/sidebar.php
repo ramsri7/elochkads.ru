@@ -7,7 +7,8 @@
                 <li>
                     <h3>Рубрики</h3>
                     <ul>
-                        <?php wp_list_cats('sort_column=name&optioncount=0&hierarchical=0'); ?>
+                        <?php wp_list_cats('sort_column=name&optioncount=0&hierarchical=0'); ?>dfdf
+<?php echo wp_list_categories();?>
                     </ul>
                 </li>
                 <li>

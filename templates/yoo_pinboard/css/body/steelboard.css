@@ -1,0 +1,13 @@
+/* Copyright (C) 2007 - 2009 YOOtheme GmbH */
+
+/*
+ * Page
+ */
+ 
+body.yoopage {
+	background: url(../../images/backgrounds/steelboard.jpg) 50% 0 repeat;
+}
+
+div#page-body {
+	background: url(../../images/backgrounds/steelboard_t.jpg) 50% 0 repeat-x;
+}

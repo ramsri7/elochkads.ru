@@ -27,13 +27,13 @@
 <div id="wrapper"><div id="bottom_frame"><div id="top_frame"><div id="top_container">
 <!-- header start -->
 	<div id="header">
+        <h2><?php bloginfo('description'); ?></h2>
 	<?php $tmp=(is_single() || is_page())? "div":"h1";?>
 		<<?php echo $tmp;?>  id="blog_title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></<?php echo $tmp;?>>
-		<h2><?php bloginfo('description'); ?></h2>
 		<div id="menu">
 			<ul>
-				<li class="menu_first"><a href="<?php bloginfo('url'); ?>">Главная</a></li>
-				<?php wp_list_pages('title_li=&sort_column=post_title&depth=1'); ?>
+				<li class="menu_first"><a href="<?php bloginfo('url'); ?>?cat=1">Наши новости</a></li>
+				<?php wp_list_pages('title_li=&sort_column=menu_order&post_title&depth=1'); ?>
 			</ul>
 		</div>
 		<div id="rss"><a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/spacer.gif" alt="RSS" /></a></div>

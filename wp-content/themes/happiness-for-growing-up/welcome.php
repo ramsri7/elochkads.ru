@@ -1,3 +1,1 @@
-<!-- replace the content with your welcome text -->
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum justo et erat pharetra vel bibendum nibh sollicitudin. Praesent vel felis nisl. 
+Наш сайт в первую очередь адресован тем, кто заинтересован в гармоничном и всестороннем развитии своего ребенка, кто готов поделиться опытом и рассказать о трудностях воспитания и обучения.

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="template">
+	<name>yoo_pinboard</name>
+	<version>1.5.14</version>
+	<creationDate>April 2010</creationDate>
+	<author>YOOtheme</author>
+	<authorEmail>info@yootheme.com</authorEmail>
+	<authorUrl>http://www.yootheme.com</authorUrl>
+    <copyright>Copyright (C) 2007 - 2009 YOOtheme GmbH</copyright>
+    <license></license>
+	<description><![CDATA[
+<img src="../templates/yoo_pinboard/template_thumbnail.png" align="right" style="margin: 0px 0px 10px 10px;" />
+
+<div style="font-size: 13px;">
+Pinboard is the February 2009 template of the YOOtheme club.
+<br /><br /><span style="color: #ff0000;"><b>NOTE: It is not free or public. This template is for members of the YOOtheme club only.</b></span>
+<br /><br />YOOtheme website<br /><a href="http://www.yootheme.com/">http://www.yootheme.com</a>.
+<br /><br />YOOtheme demo server<br /><a href="http://demo.yootheme.com/">http://demo.yootheme.com</a>.
+<br /><br />YOOtools website<br /><a href="http://www.yootools.com/">http://www.yootools.com</a>.
+<br /><br />Help for all YOOtheme products: YOOtorials website<br /><a href="http://www.yootorials.com/">http://www.yootorials.com</a>.
+</div>
+
+<h3 style="clear: both;">Changelog</h3>
+
+<b>1.5.14</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- Updated overrides according to Joomla 1.5.16 (html/com_user/reset/confirm.php)<br />
+</div>
+<br /><br />
+
+<b>1.5.13</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- Updated for PHP 5.3 compatibility<br />
+- Fixed XSS issue with yt_color<br />
+</div>
+<br /><br />
+
+<b>1.5.12</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- Fixed double page title in com_user<br />
+</div>
+<br /><br />
+
+<b>1.5.11</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- Updated overrides according to Joomla 1.5.15<br />
+- Updated Mootools to 1.1.2<br />
+</div>
+<br /><br />
+
+<b>1.5.10</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- Fixed menu issues (/html/mod_mainmenu/yoomenu.php)<br />
+</div>
+<br /><br />
+
+<b>1.5.9</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- Updated overrides according to Joomla 1.5.12<br />
+</div>
+<br /><br />
+
+<b>1.5.8</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- Updated overrides according to Joomla 1.5.11<br />
+</div>
+<br /><br />
+
+<b>1.5.7</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- IE8 detection fix (lib/php/yootools.php)<br />
+</div>
+<br /><br />
+
+<b>1.5.6</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- Updated YOOsearch template addon to fix html entity encoding issue (/html/com_search/search/yoosearch.php)<br />
+</div>
+<br /><br />
+
+<b>1.5.5</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- Updated overrides according to Joomla 1.5.10<<br />
+</div>
+<br /><br />
+
+<b>1.5.4</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- Fixed IE7 margin issue<br />
+- Disabled IE7 drop down effect<br />
+</div>
+<br /><br />
+
+<b>1.5.3</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- Fixed issue with Drop Down Menu<br />
+</div>
+<br /><br />
+
+<b>1.5.2</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- Fixed Section/Category description issue in overrides<br />
+</div>
+<br /><br />
+
+<b>1.5.1</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- Fixed Menubar bug when Gzip is enabled (template.css.php, yootools.php)<br />
+</div>
+<br /><br />
+
+<b>1.5.0</b><br />
+<div style="margin: 0px 0px 0px 10px;">
+- Initial Release<br />
+</div>
+<br /><br />
+
+]]></description>
+	<files>
+		<filename>component.php</filename>
+		<filename>raw.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>apple_touch_icon.png</filename>
+		<filename>index.php</filename>
+		<filename>params.ini</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>html</folder>
+		<folder>lib</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+	</files>
+	<positions>
+		<position>absolute</position>
+		<position>topmenu</position>
+		<position>search</position>
+		<position>logo</position>
+		<position>menu</position>
+		<position>banner</position>
+		<position>toolbar</position>
+		<position>header</position>
+		<position>breadcrumbs</position>
+		<position>left</position>
+		<position>right</position>
+		<position>footer</position>
+		<position>top</position>
+		<position>top-equal</position>
+		<position>top-goldenratio</position>
+		<position>main-top-equal</position>
+		<position>main-top-goldenratio</position>
+		<position>content-top-equal</position>
+		<position>content-top-goldenratio</position>
+		<position>content-bottom-equal</position>
+		<position>content-bottom-goldenratio</position>
+		<position>main-bottom-equal</position>
+		<position>main-bottom-goldenratio</position>
+		<position>bottom</position>
+		<position>bottom-equal</position>
+		<position>bottom-goldenratio</position>
+		<position>content1</position>
+		<position>content2</position>
+		<position>content3</position>
+		<position>content4</position>
+		<position>content5</position>
+		<position>content6</position>
+		<position>content7</position>
+		<position>content8</position>
+		<position>content9</position>
+		<position>debug</position>
+	</positions>
+	<params>
+		<param name="colorHeader" type="list" default="default" label="Header Color" description="Used color for template header">
+			<option value="default">Stripes 1</option>
+			<option value="stripes2">Stripes 2</option>
+			<option value="fabricstripes">Fabric Stripes</option>
+			<option value="plaster">Plaster</option>
+			<option value="retro">Retro</option>
+			<option value="cherry">Cherry</option>
+			<option value="concrete">Concrete</option>
+			<option value="beige">Beige Stripes</option>
+			<option value="blue">Blue Stripes</option>
+			<option value="grass">Grass Stripes</option>
+			<option value="green">Green Stripes</option>
+			<option value="lemon">Lemon Stripes</option>
+			<option value="pink">Pink Stripes</option>
+			<option value="red">Red Stripes</option>
+			<option value="yellow">Yellow Stripes</option>
+		</param>
+		<param name="colorMenubar" type="list" default="default" label="Menubar Color" description="Used color for template menubar">
+			<option value="default">Wood</option>
+			<option value="varnish">Varnish</option>
+			<option value="plastic">Plastic</option>
+		</param>
+		<param name="colorBody" type="list" default="default" label="Body Color" description="Used color for template body">
+			<option value="default">Corkboard</option>
+			<option value="fabricboard">Fabricboard</option>
+			<option value="chalkboard">Chalkboard</option>
+			<option value="pressboard">Pressboard</option>		
+			<option value="steelboard">Steelboard</option>
+		</param>
+		<param name="width" type="text" size="10" default="860" label="Template Width" description="Set the template width in pixels" />
+		<param name="layout" type="list" default="left" label="Layout Style" description="Left column is aligned to the left/right">
+			<option value="left">Left</option>
+			<option value="right">Right</option>
+		</param>
+		<param name="date" type="radio" default="1" label="Show Date" description="Show/Hide the date">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="loadMootools" type="radio" default="1" label="Enable Mootools" description="Enable/Disable Mootools 1.11 javascript library">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="loadJavascript" type="radio" default="1" label="Enable Javascripts" description="Enable/Disable all the templates javascripts">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="gzip" type="radio" default="0" label="Enable CSS/JS gzip" description="Enable/Disable the templates gzip compression for css and javascripts">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+</install>
