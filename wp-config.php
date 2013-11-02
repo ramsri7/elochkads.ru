@@ -22,7 +22,7 @@ define('DB_NAME', 'elochkads');
 define('DB_USER', 'elochkads_user');
 
 /** Пароль к базе данных MySQL */
-define('DB_PASSWORD', '21536642');
+define('DB_PASSWORD', '8aM8mkPmUR');
 
 /** Имя сервера MySQL */
 define('DB_HOST', 'localhost');

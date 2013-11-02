@@ -4,9 +4,6 @@
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <title><?php wp_title('&raquo; ',true,'right'); ?><?php bloginfo('name'); ?><?php echo ($paged>1)? " - Page $paged":"";?></title>
 <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/reset.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/default.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <!--[if lte IE 6]>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie.css" type="text/css" media="screen" />
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/iepng.js" type="text/javascript"></script>
@@ -21,6 +18,9 @@
 <?php wp_get_archives('type=monthly&format=link'); ?>
 <?php //comments_popup_script(); // off by default ?>
 <?php wp_head(); ?>
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 </head>
 <body>
 <!-- wrapper start -->
@@ -32,7 +32,7 @@
 		<<?php echo $tmp;?>  id="blog_title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></<?php echo $tmp;?>>
 		<div id="menu">
 			<ul>
-				<li class="menu_first"><a href="<?php bloginfo('url'); ?>?cat=1">Наши новости</a></li>
+				<li class="menu_first"><a href="<?php bloginfo('url'); ?>?cat=1">Новости</a></li>
 				<?php wp_list_pages('title_li=&sort_column=menu_order&post_title&depth=1'); ?>
 			</ul>
 		</div>

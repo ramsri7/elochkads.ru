@@ -16,22 +16,24 @@
 <h1 class="post-title">
 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1></div>
                 <div class="entry">
-<?php $aboutUsPageId = 4; ?>
-<?php if ($_GET['page_id'] == $aboutUsPageId || $post->post_parent == $aboutUsPageId): ?>
-    <div id='page_sub_menu'>
-    <li class="page_item page-item-4"><a href='/?page_id=4'>О нас</a></li>
+
+<div id='page_sub_menu'>
+    <li class="page_item page-item-4">
+        <?php echo '<a href="'.get_permalink($post->post_parent).'">'.get_the_title($post->post_parent).'</a>';?>
+    </li>
     <?php wp_list_pages( array(
         'depth'    => 1,
-        'child_of' => 4,
+        'child_of' => $post->post_parent ? $post->post_parent : $_GET['page_id'],
         'title_li' => ''
     )); ?> 
-    </div><br/>
-<?php endif;?>
+</div><br/>
 <?php the_content(); ?></div>
-				<div class="endline"></div>
+				
+                                <div class="endline"></div>
 				<?php wp_link_pages(array('before' => '<p><strong>Страницы:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
                 <?php if ( $user_ID ) : ?>
-					<div class="edit_post"><?php edit_post_link(__('Редактировать')); ?> (Вы вошли как <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>)</div>
+
+                                <div class="edit_post"><?php edit_post_link(__('Редактировать')); ?> (Вы вошли как <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>)</div>
 				<?php endif; ?>
 				
 			</div>
